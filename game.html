@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <meta
+    name="description"
+    content="Raven Watch — a small Victorian-garden game by Nitin Kaira. Shoo the ravens before they snuff the lanterns."
+  >
+
+  <title>Raven Watch — Nitin Kaira</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body>
+
+  <header class="game-nav">
+
+    <a class="back-link" href="index.html">
+      ← Back to portfolio
+    </a>
+
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      type="button"
+      aria-label="Switch to light theme"
+      aria-pressed="false"
+    >
+      <span class="toggle-thumb">
+        <svg class="icon icon-sun" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="1.5 3"/>
+          <circle cx="20" cy="20" r="6.5" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <line x1="20" y1="2" x2="20" y2="7"/>
+            <line x1="20" y1="33" x2="20" y2="38"/>
+            <line x1="2" y1="20" x2="7" y2="20"/>
+            <line x1="33" y1="20" x2="38" y2="20"/>
+            <line x1="7.5" y1="7.5" x2="10.8" y2="10.8"/>
+            <line x1="29.2" y1="29.2" x2="32.5" y2="32.5"/>
+            <line x1="7.5" y1="32.5" x2="10.8" y2="29.2"/>
+            <line x1="29.2" y1="10.8" x2="32.5" y2="7.5"/>
+          </g>
+        </svg>
+        <svg class="icon icon-moon" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="1.5 3"/>
+          <path d="M25 8a13 13 0 1 0 7 23 10.4 10.4 0 0 1-7-23z" fill="currentColor"/>
+          <circle cx="29" cy="11.5" r="1.2" fill="currentColor"/>
+          <circle cx="32.2" cy="17" r="0.7" fill="currentColor"/>
+        </svg>
+      </span>
+    </button>
+
+  </header>
+
+  <main class="game-main">
+
+    <div class="game-wrap">
+
+      <div class="game-heading">
+        <p class="eyebrow">A small diversion</p>
+        <h1>Raven Watch</h1>
+        <p class="subtitle">
+          The ravens are after the lanterns again. Tap one the moment it lands — before it snuffs the flame.
+        </p>
+      </div>
+
+      <div class="hud" role="status" aria-live="polite">
+        <div class="hud-item">
+          <span class="hud-label">Score</span>
+          <span class="hud-value" id="scoreValue">0</span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Lanterns left</span>
+          <span class="hud-value" id="livesValue">
+            <span class="life" data-life="1">◈</span><span class="life" data-life="2">◈</span><span class="life" data-life="3">◈</span>
+          </span>
+        </div>
+        <div class="hud-item">
+          <span class="hud-label">Time</span>
+          <span class="hud-value" id="timeValue">45</span>
+        </div>
+      </div>
+
+      <div class="board" id="board" aria-label="Garden of lantern posts">
+        <!-- posts injected by game.js -->
+      </div>
+
+      <p class="hint">Best of 45 seconds. Three lanterns to lose.</p>
+
+    </div>
+
+  </main>
+
+  <div class="overlay" id="startOverlay">
+    <div class="overlay-card">
+      <p class="eyebrow">Raven Watch</p>
+      <h2>The garden gate is open</h2>
+      <p class="overlay-copy">
+        Ravens will land on the lanterns and try to snuff them out. Tap or click a lantern the moment a raven lands on it to shoo it away. Miss three, and the watch ends.
+      </p>
+      <button class="btn-primary" id="startBtn" type="button">Begin the watch</button>
+    </div>
+  </div>
+
+  <div class="overlay hidden" id="endOverlay">
+    <div class="overlay-card">
+      <p class="eyebrow" id="endEyebrow">The garden falls quiet</p>
+      <h2 id="endHeading">Watch ended</h2>
+      <div class="end-stats">
+        <div>
+          <span class="hud-label">Score</span>
+          <span class="end-score" id="finalScore">0</span>
+        </div>
+        <div>
+          <span class="hud-label">Best</span>
+          <span class="end-score" id="bestScore">0</span>
+        </div>
+      </div>
+      <div class="overlay-actions">
+        <button class="btn-primary" id="retryBtn" type="button">Watch again</button>
+        <a class="btn-secondary" href="index.html">Back to portfolio</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+
+</body>
+</html>

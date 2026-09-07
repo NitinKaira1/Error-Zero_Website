@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta
+    name="description"
+    content="Nitin Kaira — AI & Data Science student building practical machine learning systems and software."
+  >
+
+  <title>Nitin Kaira — AI & Data Science</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Jim+Nightshade&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <canvas id="bg-fx" aria-hidden="true"></canvas>
+
+  <header class="nav">
+
+    <div class="contact-links">
+
+      <a href="mailto:kairaoketime@gmail.com">
+        Email
+      </a>
+
+      <a
+        href="https://github.com/NitinKaira1"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        GitHub
+      </a>
+
+      <a
+        href="https://linkedin.com/in/nitin-kaira-5b7a46242/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+    </div>
+
+    <button
+      class="theme-toggle"
+      id="themeToggle"
+      type="button"
+      aria-label="Switch to light theme"
+      aria-pressed="false"
+    >
+      <span class="toggle-thumb">
+
+        <svg class="icon icon-sun" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="11" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="1.5 3"/>
+          <circle cx="20" cy="20" r="6.5" fill="currentColor"/>
+          <g stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
+            <line x1="20" y1="2" x2="20" y2="7"/>
+            <line x1="20" y1="33" x2="20" y2="38"/>
+            <line x1="2" y1="20" x2="7" y2="20"/>
+            <line x1="33" y1="20" x2="38" y2="20"/>
+            <line x1="7.5" y1="7.5" x2="10.8" y2="10.8"/>
+            <line x1="29.2" y1="29.2" x2="32.5" y2="32.5"/>
+            <line x1="7.5" y1="32.5" x2="10.8" y2="29.2"/>
+            <line x1="29.2" y1="10.8" x2="32.5" y2="7.5"/>
+          </g>
+        </svg>
+
+        <svg class="icon icon-moon" viewBox="0 0 40 40" aria-hidden="true">
+          <circle cx="20" cy="20" r="12" fill="none" stroke="currentColor" stroke-width="0.75" stroke-dasharray="1.5 3"/>
+          <path d="M25 8a13 13 0 1 0 7 23 10.4 10.4 0 0 1-7-23z" fill="currentColor"/>
+          <circle cx="29" cy="11.5" r="1.2" fill="currentColor"/>
+          <circle cx="32.2" cy="17" r="0.7" fill="currentColor"/>
+        </svg>
+
+      </span>
+    </button>
+
+  </header>
+
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-glow"></div>
+
+      <div class="wrap">
+
+        <p class="eyebrow">
+          Delhi, India
+        </p>
+
+        <h1>
+          Nitin Kaira
+        </h1>
+
+        <p class="role">
+          AI & Data Science student building ML systems, RAG tools and software.
+        </p>
+
+        <p class="intro">
+          I like turning ideas into working projects — from CNNs and reinforcement learning to local LLM applications.
+        </p>
+
+        <div class="meta">
+          <span>kairaoketime@gmail.com</span>
+          <span>+91 9315971704</span>
+        </div>
+
+        <a class="bored-link" href="game.html">
+          <span class="bored-link-icon" aria-hidden="true">✦</span>
+          I'm bored — play a game I built
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section id="about">
+
+      <div class="wrap">
+
+        <div class="section-title">
+          <span>I.</span>
+          <h2>About</h2>
+        </div>
+
+        <div class="about">
+
+          <p>
+            I'm a B.Tech AI & Data Science student at GGSIPU, Delhi, focused on machine learning, RAG systems and software development.
+          </p>
+
+          <p>
+            I enjoy building practical projects that make AI easier to understand and use.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="work">
+
+      <div class="wrap">
+
+        <div class="section-title">
+          <span>II.</span>
+          <h2>Projects</h2>
+        </div>
+
+        <div class="projects">
+
+          <article class="project">
+
+            <div>
+              <h3>
+                Context Heatmap
+              </h3>
+
+              <p class="tech">
+                RAG · Local LLMs · HTML/JS
+              </p>
+            </div>
+
+            <p>
+              Offline tool that shows which parts of a document influenced a RAG answer.
+            </p>
+
+            <a
+              href="https://github.com/NitinKaira1/context-heatmap"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub →
+            </a>
+
+          </article>
+
+
+          <article class="project">
+
+            <div>
+              <h3>
+                Handwritten Digit Recognizer
+              </h3>
+
+              <p class="tech">
+                PyTorch · CNN · Tkinter
+              </p>
+            </div>
+
+            <p>
+              Draw a digit on a canvas and get a real-time CNN prediction.
+            </p>
+
+            <a
+              href="https://github.com/NitinKaira1/Handwritten_Digit_Recognizer"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub →
+            </a>
+
+          </article>
+
+
+          <article class="project">
+
+            <div>
+              <h3>
+                Q-Learning Maze Simulation
+              </h3>
+
+              <p class="tech">
+                Python · Pygame · Reinforcement Learning
+              </p>
+            </div>
+
+            <p>
+              Interactive maze where a Q-learning agent learns to reach the goal.
+            </p>
+
+            <a
+              href="https://github.com/NitinKaira1/Q-Learning_Maze_Simulation"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub →
+            </a>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <section id="skills">
+
+      <div class="wrap">
+
+        <div class="section-title">
+          <span>III.</span>
+          <h2>Skills</h2>
+        </div>
+
+        <div class="skills">
+
+          <div>
+            <h3>
+              Languages
+            </h3>
+
+            <p>
+              Python · Java · C/C++ · C# · JavaScript · SQL
+            </p>
+          </div>
+
+
+          <div>
+            <h3>
+              AI / ML
+            </h3>
+
+            <p>
+              PyTorch · CNNs · Reinforcement Learning · CLIP · RAG · LangChain · Local LLMs
+            </p>
+          </div>
+
+
+          <div>
+            <h3>
+              Tools
+            </h3>
+
+            <p>
+              Git/GitHub · Streamlit · Tkinter · PyQt6 · Pygame · Unity
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <footer>
+    © 2026 <span class="footer-name">Nitin Kaira</span>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
