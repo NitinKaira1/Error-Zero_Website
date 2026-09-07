@@ -10,6 +10,7 @@ A personal portfolio website designed with a dark Victorian-inspired aesthetic, 
 - Responsive design
 - Minimal left-side navigation
 - Projects and skills sections
+- "Raven Watch" — a small whack-a-raven game built into the site
 - Pure HTML, CSS and JavaScript
 - Google Fonts: Jim Nightshade + Libre Baskerville
 
@@ -27,6 +28,10 @@ The visual style is inspired by vintage Victorian interiors, botanical illustrat
 - Deep emerald
 - Antique gold
 
+## 🕹️ Raven Watch
+
+A small game reachable from the "I'm bored" link on the homepage. Ravens land on lantern posts and try to snuff them out — tap or click a lantern the moment a raven lands to shoo it away. Three lanterns to lose, 45 seconds on the clock, difficulty ramps up as the round goes on, and your best score is saved locally in the browser. Built with the same theme, fonts, and color tokens as the rest of the site, and works on both desktop and mobile.
+
 ## 🛠️ Built With
 
 - HTML5
@@ -40,4 +45,8 @@ The visual style is inspired by vintage Victorian interiors, botanical illustrat
 portfolio/
 ├── index.html
 ├── style.css
-└── script.js
+├── script.js
+├── game.html
+├── game.css
+└── game.js
+```
