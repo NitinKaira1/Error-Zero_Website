@@ -29,6 +29,29 @@ updateThemeToggle();
 
 
 /* ------------------------------------------------------------------ */
+/* CLICK FX — gem-shaped burst on click                                */
+/* ------------------------------------------------------------------ */
+
+(() => {
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  ).matches;
+
+  if (reduceMotion) return;
+
+  document.addEventListener("click", (e) => {
+    const fx = document.createElement("span");
+    fx.className = "click-fx";
+    fx.style.left = e.clientX + "px";
+    fx.style.top = e.clientY + "px";
+
+    document.body.appendChild(fx);
+    fx.addEventListener("animationend", () => fx.remove());
+  });
+})();
+
+
+/* ------------------------------------------------------------------ */
 /* RAVEN WATCH — whack-a-raven                                         */
 /* ------------------------------------------------------------------ */
 
