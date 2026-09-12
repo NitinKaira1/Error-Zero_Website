@@ -1,3 +1,32 @@
+/* ------------------------------------------------------------------ */
+/* PAGE LOADER — spinning diamond until the page is ready               */
+/* ------------------------------------------------------------------ */
+
+(() => {
+  const loader = document.getElementById("pageLoader");
+  if (!loader) return;
+
+  const MIN_MS = 450;
+  const start = performance.now();
+
+  function reveal() {
+    const elapsed = performance.now() - start;
+    const wait = Math.max(0, MIN_MS - elapsed);
+
+    setTimeout(() => {
+      loader.classList.add("hidden");
+      setTimeout(() => loader.remove(), 600);
+    }, wait);
+  }
+
+  if (document.readyState === "complete") {
+    reveal();
+  } else {
+    window.addEventListener("load", reveal);
+  }
+})();
+
+
 const root = document.documentElement;
 const toggle = document.getElementById("themeToggle");
 
